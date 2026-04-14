@@ -27,15 +27,16 @@ body {
   overflow: hidden;
 }
 
-/* 手机全屏时去掉边框和圆角 */
-@media (max-width: 430px) {
+/* 触摸设备（手机/平板）全屏显示，去掉装饰边框 */
+@media (pointer: coarse) {
+  body {
+    background-color: #f0fdf4;
+    align-items: stretch;
+  }
   .mobile-app-container {
     max-width: 100%;
     border-radius: 0;
     box-shadow: none;
-  }
-  body {
-    background-color: #f0fdf4;
   }
 }
 
